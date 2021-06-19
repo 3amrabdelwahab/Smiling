@@ -1,0 +1,91 @@
+:root {
+    --h100: 100px;
+    --h150: 150px;
+    --h200: 200px;
+    --varh: 200px;
+    --trans: 0.2s all ease-in-out
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cadetblue;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: auto;
+}
+
+.sec {
+  height: 200px;
+  width: 900px;
+  border: 1px solid rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed rgb(66, 66, 66);
+  border-radius: 100px;
+}
+
+.artface {
+  /* border: 1px solid #000; */
+  border-radius: 100px;
+  height: var(--varh);
+  width: var(--varh);
+  position: relative;
+  top: -100px;
+  text-align: right;
+}
+.smf {
+  /* border: 1px solid #000; */
+  /* display: inline-block; */
+  /* position: absolute; */
+}
+
+.smile_2 {
+  /* position: relative; */
+  /* top: -100px; */
+}
+.smile_1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* border: 1px solid #000; */
+}
+img {
+    height: var(--varh);
+    width: var(--varh);
+    transition: var(--trans);
+}
+
+.tback {
+    height: var(--varh);
+    width: var(--varh);
+    background-color: rgba(0, 255, 200, 0.445);
+    border-radius: calc(var(--varh) / 2);
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    transition: var(--trans);
+  /* border: 1px solid #000; */
+}
+
+.sec:hover .smile_1 {
+  opacity: 0;
+}
+.sec:hover img {
+  transform: rotate(360deg);
+}
+.sec:hover .tback {
+    width: 900px;
+    border-radius: 100px;
+    opacity: 1;
+}
